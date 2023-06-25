@@ -14,7 +14,7 @@ const Detalle = () => {
 
   return (
     <div className="light detail">
-      <h1>Detalle Odontologo {id} </h1>
+      <h1>Detalle Odontologo con el id: {id} </h1>
       <div className="card">
         <h3>{odontologoState.odontologoDetalle.name}</h3>
         <h4>{odontologoState.odontologoDetalle.email}</h4>

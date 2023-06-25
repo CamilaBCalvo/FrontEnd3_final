@@ -6,16 +6,20 @@ import { useGlobalStates } from "../Components/utils/global.context";
 const Destacados = () => {
   const { destacadoState, themeState, destacadoDispatch } = useGlobalStates();
 
-  const deleteDestacado = (id) => {};
+  const deleteDestacado = (id) => {
+    destacadoDispatch({ type: "DELETE_DESTACADO", payload: id });
+  };
 
   return (
     <div className={themeState.className}>
-      <h1>Odontologos destacados</h1>
+      <h1>Listado de Odontologos Favoritos</h1>
       <div className="card-grid light">
         {destacadoState.map((destacado) => (
           <Link key={destacado.id} to={"/detalle/" + destacado.id}>
             {" "}
-            <Card odontologo={destacado} deleteDestacado={deleteDestacado} />
+            <Card 
+            odontologo={destacado} 
+            deleteDestacado={deleteDestacado} />
           </Link>
         ))}
       </div>

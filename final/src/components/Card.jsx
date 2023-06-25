@@ -21,7 +21,7 @@ const Card = ({ name, username, id }) => {
     <div className="card">
       <img
         className="imgdoctor"
-        src="/images/doctor.jpg"
+        src="../../public/images/doctor.jpg"
         alt="foto odontologo"
       />
       <h3>{name}</h3>
@@ -29,11 +29,11 @@ const Card = ({ name, username, id }) => {
       <p>{id}</p>
       {deleteDestacado ? (
         <button onClick={deleteDestacado} className="destacadoButton">
-          Borrar Destacado ⭐
+          Agregar a Favoritos ⭐
         </button>
       ) : (
         <button onClick={addDestacado} className="destacadoButton">
-          Agregar Destacado ⭐
+          Quitar de Favoritos ⭐
         </button>
       )}
     </div>
@@ -41,3 +41,4 @@ const Card = ({ name, username, id }) => {
 };
 
 export default Card;
+

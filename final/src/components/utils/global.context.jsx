@@ -25,21 +25,21 @@ const initialThemeState = themes.light;
 const initialDestacadoState =
   JSON.parse(localStorage.getItem("destacados")) || [];
 
-const odontologoReducer = (state, action) => {
-  switch (action.type) {
-    case "GET_ODONTOLOGOS":
-      return {
-        odontologoList: action.payload,
-        odontologoDetalle: state.odontologoDetalle,
-      };
-    case "GET_ODONTOLOGO":
-      return {
-        odontologoDetalle: action.payload,
-        odontologoList: state.odontologoList,
-      };
-    default:
-      throw new Error();
-  }
+  const odontologoReducer = (state, action) => {
+    switch (action.type) {
+      case "GET_ODONTOLOGOS":
+        return {
+          odontologoList: action.payload,
+          odontologoDetalle: state.odontologoDetalle,
+        };
+      case "GET_ODONTOLOGO":
+        return {
+          odontologoDetalle: action.payload,
+          odontologoList: state.odontologoList,
+        };
+      default:
+        throw new Error();
+    }
 };
 
 const themeReducer = (state, action) => {
@@ -54,14 +54,12 @@ const themeReducer = (state, action) => {
 };
 const destacadoReducer = (state, action) => {
   switch (action.type) {
-    case "ADD_DESTACADOS":
+    case "ADD_DESTACADO":
       return [...state, action.payload];
-
-    case "DELETE_DESTACADOS":
-      return [...state, action.payload];
-
+    case "DELETE_DESTACADO":
+      return state.filter((destacado) => destacado.id !== action.payload);
     default:
-      throw new Error();
+      throw new Error("Unknown action type");
   }
 };
 
@@ -94,7 +92,7 @@ const ContextProvider = ({ children }) => {
       );
   }, []);
 
-  const getOdontologo = (id) => {
+  const getOdontologo = async (id) => {
     let url = "https://jsonplaceholder.typicode.com/users/" + id;
     fetch(url)
       .then((response) => response.json())
@@ -112,6 +110,7 @@ const ContextProvider = ({ children }) => {
         destacadoState,
         destacadoDispatch,
         getOdontologo,
+        //odontologoDetalle: odontologoState.odontologoDetalle,
       }}
     >
       {children}

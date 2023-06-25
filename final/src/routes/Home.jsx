@@ -13,8 +13,11 @@ const Home = () => {
       <div className="card-grid">
         {odontologoState.odontologoList.map((odontologo) => (
           <Link key={odontologo.id} to={"/detalle/" + odontologo.id}>
-            {" "}
-            <Card odontologo={odontologo} />
+            <Card
+              name={odontologo.name}
+              username={odontologo.username}
+              id={odontologo.id}
+            />
           </Link>
         ))}
       </div>
