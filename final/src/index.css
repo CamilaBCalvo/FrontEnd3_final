@@ -1,0 +1,260 @@
+body {
+  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+
+.favButton{
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.enviarButton{
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  border: none;
+  width: 109%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.backButton{
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+ }
+
+.themeButton{
+  width: 2rem;
+  height: 2rem;
+  order: 3;
+    
+}
+div nav div{
+ display: flex;
+ justify-content: space-around;
+ width: 40%;
+ order: 2;
+ 
+ 
+ }
+
+ nav div a{
+  color: white;
+ }
+
+ nav a h1{
+  color: white;
+ }
+
+ nav h1 span{
+  color: rgb(247, 122, 122);
+ }
+
+a{
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+a:hover{
+  color: rgb(136, 136, 136);
+} 
+
+.contact{
+  display: flex;
+  flex-direction: column;
+justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+
+}
+
+
+form >label{
+  margin-top: 10px;
+}
+form > input{
+width: 300px;
+padding: 10px;
+margin-bottom: 20px ;
+border: solid #888686;
+border-radius: 5px;
+}
+
+.error{
+ color: red;
+ margin-top: 70px;
+ padding: 20px;
+ border-radius: 5px;
+ font-size: 20px;
+ background-color: rgb(206, 208, 209);
+ font-size: 20px;
+ width: 500px;
+ 
+}
+.alert{
+  margin-top: 70px;
+  padding: 20px;
+  border-radius: 5px;
+  color: rgb(0, 110, 255);
+  background-color: rgb(206, 208, 209);
+  font-size: 20px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer .logo{
+    width: 200px;
+}
+
+footer .ico{
+  width: 28px;
+  
+}
+
+footer .redesSociales{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  width: 200px;
+  border-radius: 10px;
+ padding-left: 10px;
+padding-right: 10px;  
+
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  font-size: 12px;
+}
+
+.card:hover{
+  border: 0.5px solid rgb(206, 217, 142);
+}
+
+.card-grid{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 90vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.imgdoctor{
+  width: 100%;
+}
+table {
+ border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.dark{
+  background-color: black;
+  color: white;
+}
+.dark > nav> div> a {
+  color: black;
+}
+.dark > a {
+  color: white;
+}
+.dark nav{
+  background-color: white;
+}
+.dark nav a h1{
+  color: black;
+ }
+ .dark .card{
+  color: white;
+ }
+.light nav{
+  background-color: black;
+}
+
+.dark .favButton{
+  background-color: whitesmoke ;
+}
