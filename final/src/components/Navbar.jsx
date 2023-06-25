@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav>
         <Link to={"https://www.digitalhouse.com/ar"}>
           <h1>
-            <span>D</span>H ODONTO
+            <span>D</span>H ODONTOLOGOS
           </h1>
         </Link>
 

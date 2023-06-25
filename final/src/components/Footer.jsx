@@ -7,6 +7,7 @@ function Footer() {
       <Link to={"https://www.digitalhouse.com/ar"}>
         <img className="logo" src="../../public/images/DH.png" alt="DH-logo" />
       </Link>
+      <p>Alumna: Camila Calvo</p>
       <div className="redesSociales">
         <Link to={"https://www.instagram.com/_digitalhouse/?hl=es"}>
           {" "}
