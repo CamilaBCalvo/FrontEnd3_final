@@ -5,6 +5,7 @@ import { useGlobalStates } from "../components/utils/global.context";
 const Card = ({ name, username, id }) => {
   const { destacadoDispatch } = useGlobalStates();
 
+
   //const isDestacado = destacadoState.some((destacado) => destacado.id === id);
 
   const addDestacado = (name, username, id) => {

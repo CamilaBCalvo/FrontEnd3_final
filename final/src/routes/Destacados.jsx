@@ -18,12 +18,10 @@ const Destacados = () => {
       <div className="card-grid light">
         {destacadoState.map((destacado) => (
           <Link key={destacado.id} to={"/detalle/" + destacado.id}>
-            <Card
-              name={destacado.name}
-              username={destacado.username}
-              id={destacado.id}
-              deleteDestacado={deleteDestacado}
-            />
+            {" "}
+            <Card 
+            odontologo={destacado} 
+            deleteDestacado={deleteDestacado} />
           </Link>
         ))}
       </div>

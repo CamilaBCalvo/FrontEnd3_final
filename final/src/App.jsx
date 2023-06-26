@@ -6,7 +6,6 @@ import './index.css'
 import Detalle from "./Routes/Detalle";
 import Destacados from "./Routes/Destacados";
 import Contacto from "./Routes/Contacto";
-import Button from "./components/button"
 
 
 
