@@ -6,6 +6,8 @@ import { useGlobalStates } from "../Components/utils/global.context";
 const Destacados = () => {
   const { destacadoState, themeState, destacadoDispatch } = useGlobalStates();
 
+  console.log(destacadoState)
+  
   const deleteDestacado = (id) => {
     destacadoDispatch({ type: "DELETE_DESTACADO", payload: id });
   };

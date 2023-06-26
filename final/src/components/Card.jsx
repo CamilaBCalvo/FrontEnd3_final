@@ -11,7 +11,7 @@ const Card = ({ name, username, id }) => {
 
   const deleteDestacado = (id) =>{
     destacadoDispatch({
-      type: "REMOVE",
+      type: "DELETE_DESTACADO",
       payload: {
         id
       }
@@ -29,11 +29,11 @@ const Card = ({ name, username, id }) => {
       <p>{id}</p>
       {deleteDestacado ? (
         <button onClick={deleteDestacado} className="destacadoButton">
-          Agregar a Favoritos ⭐
+          Quitar de Destacados ⭐
         </button>
       ) : (
         <button onClick={addDestacado} className="destacadoButton">
-          Quitar de Favoritos ⭐
+          Agregar a Destacados ⭐
         </button>
       )}
     </div>

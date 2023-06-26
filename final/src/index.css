@@ -19,12 +19,11 @@ code {
   height: 100vh;
 }
 
-
-.favButton{
+.destacadoButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
   border: none;
-  width: 100%;
+  width: 90%;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
