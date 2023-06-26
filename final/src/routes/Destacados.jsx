@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Card from "../Components/Card";
 import { Link } from "react-router-dom";
-import { useGlobalStates } from "../Components/utils/global.context";
+import { useGlobalStates } from "../components/utils/global.context";
 
 const Destacados = () => {
   const { destacadoState, themeState, destacadoDispatch } = useGlobalStates();
@@ -18,10 +18,12 @@ const Destacados = () => {
       <div className="card-grid light">
         {destacadoState.map((destacado) => (
           <Link key={destacado.id} to={"/detalle/" + destacado.id}>
-            {" "}
-            <Card 
-            odontologo={destacado} 
-            deleteDestacado={deleteDestacado} />
+            <Card
+              name={destacado.name}
+              username={destacado.username}
+              id={destacado.id}
+              deleteDestacado={deleteDestacado}
+            />
           </Link>
         ))}
       </div>

@@ -92,7 +92,7 @@ const ContextProvider = ({ children }) => {
       );
   }, []);
 
-  const getOdontologo = async (id) => {
+  const getOdontologo =  (id) => {
     let url = "https://jsonplaceholder.typicode.com/users/" + id;
     fetch(url)
       .then((response) => response.json())
@@ -110,7 +110,7 @@ const ContextProvider = ({ children }) => {
         destacadoState,
         destacadoDispatch,
         getOdontologo,
-        //odontologoDetalle: odontologoState.odontologoDetalle,
+        odontologoDetalle: odontologoState.odontologoDetalle,
       }}
     >
       {children}

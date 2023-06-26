@@ -20,6 +20,7 @@ const Home = () => {
             />
           </Link>
         ))}
+      
       </div>
     </main>
   );

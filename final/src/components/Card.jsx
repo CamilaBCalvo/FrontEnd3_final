@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { useGlobalStates } from "./utils/global.context";
+import React from "react";
+import { Navigate, useParams } from "react-router-dom";
+import { useGlobalStates } from "../components/utils/global.context";
 
 const Card = ({ name, username, id }) => {
   const { destacadoDispatch } = useGlobalStates();
+
+  //const isDestacado = destacadoState.some((destacado) => destacado.id === id);
 
   const addDestacado = (name, username, id) => {
     destacadoDispatch({ type: "ADD_DESTACADO", payload:{id, username,name} });
@@ -27,13 +29,13 @@ const Card = ({ name, username, id }) => {
       <h3>{name}</h3>
       <h4>{username}</h4>
       <p>{id}</p>
-      {deleteDestacado ? (
+      {!deleteDestacado ? (
         <button onClick={deleteDestacado} className="destacadoButton">
           Quitar de Destacados ⭐
         </button>
       ) : (
         <button onClick={addDestacado} className="destacadoButton">
-          Agregar a Destacados ⭐
+          Destacar ⭐
         </button>
       )}
     </div>
