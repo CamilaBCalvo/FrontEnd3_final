@@ -12,13 +12,12 @@ const Home = () => {
       <h1>Listado de Odontologos</h1>
       <div className="card-grid">
         {odontologoState.odontologoList.map((odontologo) => (
-          <Link key={odontologo.id} to={"/detalle/" + odontologo.id}>
-            <Card
+          // <Link key={odontologo.id} to={"/detalle/" + odontologo.id}>
+            <Card key={odontologo.id}
               name={odontologo.name}
               username={odontologo.username}
               id={odontologo.id}
             />
-          </Link>
         ))}
       
       </div>

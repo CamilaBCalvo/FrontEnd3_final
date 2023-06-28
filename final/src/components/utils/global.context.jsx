@@ -52,6 +52,7 @@ const themeReducer = (state, action) => {
       throw new Error();
   }
 };
+
 const destacadoReducer = (state, action) => {
   switch (action.type) {
     case "ADD_DESTACADO":
