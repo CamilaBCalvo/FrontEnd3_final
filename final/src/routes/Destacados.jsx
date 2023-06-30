@@ -12,16 +12,24 @@ const Destacados = () => {
     destacadoDispatch({ type: "DELETE_DESTACADO", payload: id });
   };
 
+  // El enunciado no pedia que podamos borrar las Cards agregadas a destacados, intenté hacerlo igualmente pero no pude. 
+  // Si es posible estaría bueno verlo en clase
+  // Tambien se me agregan mas de una Card del mismo odontólogo si lo "destaco" dos veces, no hablaba de eso el enunciado, 
+  // pero claramente no es algo que deba ser asi.
+
   return (
     <div className={themeState.className}>
-      <h1>Listado de Odontologos Favoritos</h1>
+      <h1>Listado de Odontologos Destacados</h1>
       <div className="card-grid light">
         {destacadoState.map((destacado) => (
           <Link key={destacado.id} to={"/detalle/" + destacado.id}>
             {" "}
             <Card 
             odontologo={destacado} 
-            deleteDestacado={deleteDestacado} />
+            name={destacado.name}
+            username={destacado.username}
+            id={destacado.id}
+             />
           </Link>
         ))}
       </div>
